@@ -1,0 +1,56 @@
+
+ext {
+
+    kotlin = '1.4.32'
+
+    coreKtx = '1.3.2'
+    appCompat = '1.2.0'
+    material = '1.3.0'
+    constraintLayout ='2.0.4'
+
+    //jetpack navigation
+    jetpackNav = '2.3.5'
+
+    //lifecycle
+    lifecycle = '2.3.1'
+
+    //hilt
+    hilt = '2.35'
+
+    //test
+    junit = '4.13.2'
+    extJunit = '1.1.2'
+    espressoCore = '3.3.0'
+
+    common = [
+            stdlib: "org.jetbrains.kotlin:kotlin-stdlib:$kotlin",
+            coreKtx:  "androidx.core:core-ktx:$coreKtx",
+            appCompat:  "androidx.appcompat:appcompat:$appCompat",
+            material:  "com.google.android.material:material:$material",
+            constraintLayout:  "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    ]
+
+    navigation = [
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$jetpackNav",
+            navigationUi: "androidx.navigation:navigation-ui-ktx:$jetpackNav"
+    ]
+
+    lifecycle = [
+            lifecycleRuntime: "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle",
+            lifecycleCommon: "androidx.lifecycle:lifecycle-common-java8:$lifecycle",
+            lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle",
+            lifecycleLiveData: "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    ]
+
+    di = [
+            hiltAndroid: "com.google.dagger:hilt-android:$hilt"
+    ]
+
+    kaptDi = [
+            hiltCompiler:  "com.google.dagger:hilt-compiler:$hilt"
+    ]
+
+
+
+}
+
