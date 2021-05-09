@@ -38,6 +38,16 @@ android {
 dependencies {
 
     common.each { implementation it.value }
+
+    db.each { implementation it.value }
+    kaptDb.each { kapt it.value }
+
+    image.each { implementation it.value }
+    video.each { implementation it.value }
+
+    network.each { implementation it.value }
+    kaptNetwork.each { kapt it.value }
+
     di.each { implementation it.value }
     kaptDi.each { kapt it.value }
 
