@@ -37,6 +37,7 @@ android {
 
 dependencies {
 
+    jetbrains.each { implementation it.value }
     common.each { implementation it.value }
 
     db.each { implementation it.value }
@@ -51,7 +52,6 @@ dependencies {
     di.each { implementation it.value }
     kaptDi.each { kapt it.value }
 
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    test.each { testImplementation it.value }
+    androidTest.each { androidTestImplementation it.value }
 }

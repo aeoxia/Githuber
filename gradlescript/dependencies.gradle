@@ -2,6 +2,7 @@
 ext {
 
     kotlinVersion = '1.4.32'
+    gradleTools = '4.1.3'
 
     //common
     coreKtx = '1.3.2'
@@ -41,8 +42,11 @@ ext {
     extJunit = '1.1.2'
     espressoCore = '3.3.0'
 
-    common = [
+    jetbrains = [
             stdlib: "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+    ]
+
+    common = [
             coreKtx:  "androidx.core:core-ktx:$coreKtx",
             appCompat:  "androidx.appcompat:appcompat:$appCompat",
             material:  "com.google.android.material:material:$material",
@@ -98,5 +102,32 @@ ext {
             coilKt: "io.coil-kt:coil:$coil"
     ]
 
+    test = [
+            juinitTest: "junit:junit:$junit"
+    ]
+
+    androidTest = [
+            junitExt: "androidx.test.ext:junit:$extJunit",
+            espresso: "androidx.test.espresso:espresso-core:$espressoCore"
+    ]
+
 }
 
+
+//jetbrains.each { implementation it.value }
+//common.each { implementation it.value }
+//
+//db.each { implementation it.value }
+//kaptDb.each { kapt it.value }
+//
+//image.each { implementation it.value }
+//video.each { implementation it.value }
+//
+//network.each { implementation it.value }
+//kaptNetwork.each { kapt it.value }
+//
+//di.each { implementation it.value }
+//kaptDi.each { kapt it.value }
+//
+//test.each { testImplementation it.value }
+//androidTest.each { androidTestImplementation it.value }
